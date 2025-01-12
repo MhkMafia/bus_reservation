@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galactic Rides - Bus Reservation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Galactic Rides</h1>
+        <div id="profile-menu">
+            <img src="https://i.imgur.com/w6KLPbC.png" alt="Profile" id="profile-icon">
+            <div id="profile-dropdown" class="hidden">
+                <ul>
+                    <li>Profile Info</li>
+                    <li>About Website</li>
+                    <li>Tickets Booked</li>
+                    <li>Cancellation</li>
+                    <li>Log Out</li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sign-in Section -->
+    <div id="auth-section" class="section">
+        <h2>Sign In</h2>
+        <form id="sign-in-form">
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button type="submit">Sign In</button>
+        </form>
+    </div>
+
+    <!-- Bus Search Section -->
+    <div id="bus-search-section" class="section hidden">
+        <h2>Find Your Bus</h2>
+        <form id="bus-search-form">
+            <input type="text" id="from-city" placeholder="From City" required>
+            <input type="text" id="to-city" placeholder="To City" required>
+            <input type="date" id="journey-date" required>
+            <button type="submit">Search Buses</button>
+        </form>
+        <p id="search-error-message" class="hidden" style="color: red;">Please fill all the fields.</p>
+    </div>
+
+    <!-- Bus List Section -->
+    <div id="bus-list-section" class="section hidden">
+        <h2>Available Buses</h2>
+        <ul id="bus-list"></ul>
+    </div>
+
+    <!-- Seat Selection Section -->
+    <div id="seat-selection-section" class="section hidden">
+        <h2>Select Your Seat</h2>
+        <div id="seat-selection-grid"></div>
+        <button id="proceed-to-details" class="hidden">Proceed</button>
+    </div>
+
+    <!-- Passenger Details Section -->
+    <div id="passenger-details-section" class="section hidden">
+        <h2>Passenger Details</h2>
+        <p>Seat: <span id="selected-seat"></span></p>
+        <input type="text" id="passenger-name" placeholder="Name" required>
+        <input type="email" id="passenger-email" placeholder="Email" required>
+        <input type="text" id="passenger-phone" placeholder="Phone" required>
+        <label>
+            <input type="checkbox" id="insurance-checkbox"> Add Insurance for ₹101
+        </label>
+        <button id="proceed-to-payment">Pay ₹1500</button>
+    </div>
+
+    <!-- Booking Confirmation Section -->
+    <div id="confirmation-section" class="section hidden">
+        <h2>Booking Confirmation</h2>
+        <p>Passenger Name: <span id="confirm-name"></span></p>
+        <p>Seat Number: <span id="confirm-seat"></span></p>
+        <p>Amount Paid: ₹<span id="confirm-amount"></span></p>
+        <p>Your booking is confirmed!</p>
+        <button id="book-another-ticket">Book Another Ticket</button>
+        <button id="back-to-home">Back to Home</button>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
